@@ -1,0 +1,23 @@
+
+<ion-header>
+
+  <ion-navbar primary>
+    <ion-title>Drug</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>รายการยาที่ได้รับ</ion-list-header>
+    <ion-item *ngFor="let drug of drugs">
+      <h2>{{ drug.drug_name }}</h2>
+      <p>{{ drug.name1 }}</p>
+      <p>{{ drug.name2 }}</p>
+      <ion-note item-right>
+        {{ drug.qty }}
+      </ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>

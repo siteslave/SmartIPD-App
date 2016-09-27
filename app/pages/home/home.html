@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar primary>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+  <ion-list>
+    <ion-list-header>Patient list</ion-list-header>
+    <button ion-item *ngFor="let person of patient" (click)="showMenu(person)">
+      <h2>{{ person.pname }}{{person.fname}} {{person.lname}}</h2>
+      <p>HN: {{person.hn}} AN: {{person.an}}</p>
+      <p>{{person.prediag}}</p>
+    </button>
+  </ion-list>
+</ion-content>
